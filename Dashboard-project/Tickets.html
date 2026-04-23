@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classera Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<!-- Navbar -->
+<div class="top-navbarT">
+
+    <div class="search-bar">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="icons">
+        <i class="bi bi-envelope"></i>
+        <i class="bi bi-bell"></i>
+        <div class="profile">
+            <img src="images\User-Profile-PNG-Clipart.png" alt="image">
+            <i class="bi bi-caret-down-fill"></i>
+        </div>
+    </div>
+
+</div>
+<!-- End Navbar -->
+    <section>
+ <!-- task2 -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Classera Logo">
+      <h2>Classera</h2>
+    </div>    
+  
+    <ul class="menu">
+      <li class="menu-item"><i class="bi bi-house-door"></i> Dashboard</li>
+      <li class="menu-item active"><a href="Tickets.html"><i class="bi bi-card-checklist"></i> Tickets</a></li>
+      <li class="menu-item"><i class="bi bi-people"></i> Customers</li>
+      <li class="menu-item"><i class="bi bi-building"></i> Organizations</li>
+      <li class="menu-item"><i class="bi bi-bar-chart"></i> Reporting</li>
+      <li class="menu-item"><i class="bi bi-gear"></i> Settings</li>
+    </ul>
+
+  
+    
+    <div class="footer">
+      <div class="chat"><i class="bi bi-chat-dots"></i> Sera</div>
+      <div class="dark-mode">
+        <span>Dark Mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+
+<div class="contnr">
+    <!-- First Line: Home Icon and Tickets -->
+    <div class="first-line">
+        <span class="home-icon"><i class="bi bi-house-door"></i><span class="charc">&gt;</span>
+    </span> <!-- Home Icon -->
+        <span class="ticket-small">Tickets</span> <!-- Small "Tickets" -->
+    </div>
+
+    <!-- Second Line: Tickets Title and Buttons -->
+    <div class="second-lin">
+        <h1 class="ticket-titl">Tickets</h1> <!-- Tickets Title -->
+        <div class="buttns">
+            <!-- First Button: White with Export Word and Cloud Icon -->
+            <button class="white-b">
+                <span class="export-i"><i class="bi bi-cloud-upload"></i></span> Export
+            </button>
+
+            <!-- Second Button: Blue with Add New and Plus Icon -->
+            <button class="blue-b" id="addTicketBtn">
+                <span class="add-new">+</span> Add Ticket
+            </button>
+            
+        </div>
+    </div>
+
+    <!-- Third Line: Overview, Development, New Feature, FAQ -->
+    <div class="third-line">
+        <span class="active-word">Overview</span>
+        <span>Development</span>
+        <span>New Feature</span>
+        <span>FAQ</span>
+    </div>
+</div>
+
+<!--cardsSection-->
+<section class="stat cCard">  
+
+    <!--card1-->
+
+  <div class="stat-cardd total-tickets">  
+   
+
+    <div >
+        <h2 style="color:mediumvioletred; margin-left: -50px;font-weight: normal;">Open</h2>
+    </div>       
+
+    <div ><h1 style="color:mediumvioletred; margin-left: -50px;font-size: 42px;">7</h1>
+    </div>  
+    <div class="sound-waves"style="  margin-top: 250px;">  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+</div>  
+  </div>  
+  
+  <!--card2-->
+
+  <div class="stat-cardd total-interactions">  
+   
+    <div >
+        <h2 style="color:rgba(18, 98, 218, 0.784); margin-left: -50px;">In Progress</h2>
+    </div>       
+
+    <div ><h1 style="color:rgba(18, 98, 218, 0.784); margin-left: -50px;">15</h1>
+    </div>  
+    
+        <div class="sound-waves"style="  margin-top: 270px;margin-right: -10px;">  
+            <div class="wave"></div>  
+            <div class="wave"></div>  
+            <div class="wave"></div>  
+            <div class="wave"></div>  
+            <div class="wave"></div>  
+    </div>  
+</div>  
+
+    <!--card3-->
+  <div class="stat-cardd total-users">  
+ 
+    <div >
+        <h2 style="color:rgb(237, 203, 79); margin-left: -50px;">Pending</h2>
+    </div>       
+
+    <div ><h1 style="color:rgb(237, 203, 79); margin-left: -50px;">44</h1>
+    </div>  
+    <div class="sound-waves" style="  margin-top: 270px;">  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+</div>  
+</div>  
+
+    <!--card4-->
+
+  <div class="stat-cardd total-groups">  
+  
+    <div >
+        <h2 style="color:rgb(5, 185, 101); margin-left: -50px;">Resolved</h2>
+    </div>       
+
+    <div ><h1 style="color:rgb(5, 185, 101); margin-left: -50px;">4205</h1>
+    </div>    <div class="sound-waves" style="  margin-top: 270px;  margin-right: -10px;">  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+        <div class="wave"></div>  
+</div>
+</div>  
+
+</section>  
+<!--endCardsSection-->
+
+<div class="sectow butt">
+    <button class="filter-btn">
+        <span class="filter-btn"><i class="bi bi-filter"></i>Filters</span> 
+    </button>
+
+
+    <div class="search-container">
+        <input type="text" placeholder="Search in table..">
+        <i class="fas fa-search"></i>
+    </div>
+</div>
+
+<!--table-->
+
+
+
+
+
+<div class="container mt-4">
+    <table class="custom-table table">
+        <thead>
+            <tr>
+                <th >ID</th>
+                <th>Brand</th>
+                <th>Requester</th>
+                <th>Assignee</th>
+                <th>Status</th>
+                <th>Interactions</th>
+                <th>Responsiveness</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>225125</td>
+                <td><img src="images/cll.jpeg" class="profile-img"> LMS</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Mohammad Ashmawi</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Huthaifa Yousef</td>
+                <td><span class="status in-progress">InProgress</span></td>
+                <td>
+                    <img src="images/cpay.png" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <span class="icon-badge">+3</span>
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width: 30%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span >30%</span>
+                </td>
+                
+                <td>Feb 22, 2022</td>
+            </tr>
+            <tr>
+                <td>225124</td>
+                <td><img src="images/cpay.png" class="profile-img"> Cpay</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Yarub Ahmad</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Omar Alhariri</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <span class="icon-badge">+1</span>
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width:95%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span >95%</span>
+                </td>
+                
+                <td>Feb 21, 2022</td>
+            </tr>
+
+            <tr>
+                <td>225125</td>
+                <td><img src="images/csp.jpeg" class="profile-img"> LMS</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Yarub Ahmad</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Mohammad Gohniamat</td>
+                <td><span class="status resolved">Resolved</span></td>
+                <td>
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width: 90%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span >90%</span>
+                </td>
+                
+                <td>Feb 22, 2022</td>
+            </tr>
+
+            <tr>
+                <td>225125</td>
+                <td><img src="images/csp.jpeg" class="profile-img"> LMS</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Yarub Ahmad</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Mahmoud Obaid</td>
+                <td><span class="status resolved">Resolved</span></td>
+                <td>
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <span class="icon-badge">+5</span>
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width: 82%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span >82%</span>
+                </td>
+                <td>Feb 22, 2022</td>
+            </tr>
+
+            <tr>
+                <td>225125</td>
+                <td><img src="images/cll.jpeg" class="profile-img"> LMS</td>
+                <td><img src="images/prof.jpeg" class="profile-img">Mohammad Ashmawi</td>
+                <td><img src="images/prof.jpeg" class="profile-img">Mohammad Temraz</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width: 90%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span>90%</span>
+                </td>
+                
+                <td>Feb 22, 2022</td>
+            </tr>
+
+
+            <tr>
+                <td>225125</td>
+                <td><img src="images/cll.jpeg" class="profile-img"> LMS</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Mohammad Ashmawi</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Huthaifa Yousef</td>
+                <td><span class="status resolved">Resolved</span></td>
+                <td>
+                    <img src="images/cpay.png" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <span class="icon-badge">+3</span>
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width: 30%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span >30%</span>
+                </td>
+                <td>Feb 22, 2022</td>
+            </tr>
+
+            <tr>
+                <td>225125</td>
+                <td><img src="images/cll.jpeg" class="profile-img"> LMS</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Mohammad Ashmawi</td>
+                <td><img src="images/prof.jpeg" class="profile-img"> Huthaifa Yousef</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>
+                    <img src="images/cpay.png" class="profile-img">
+                    <img src="images/prof.jpeg" class="profile-img">
+                    <span class="icon-badge">+3</span>
+                </td>
+                <td>
+                    <div style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; position: relative; overflow: hidden;">
+                        <div style="width: 30%; height: 100%; background-color: #007bff;"></div>
+                    </div>
+                    <span >30%</span>
+                </td>
+                
+                <td>Feb 22, 2022</td>
+            </tr>
+
+
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8" class="pagination-row">
+                    <div class="pagination-container">
+                        <button class="pagination-btn">Previous</button>
+                        <span class="page-info tex">Page 1 of 50</span>
+                        <button class="pagination-btn bt">Next</button>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+
+
+
+
+
+<script>
+    document.getElementById("addTicketBtn").addEventListener("click", function(event) {
+        event.preventDefault(); // منع الانتقال الفوري
+        document.body.classList.add("slide-out"); // تشغيل الأنيميشن
+        setTimeout(() => {
+            window.location.href = "add_ticket.html"; // انتقال للصفحة الجديدة
+        }, 500);
+    });
+</script>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  
+</body>
+</html>
